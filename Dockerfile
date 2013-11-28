@@ -13,6 +13,7 @@ RUN apt-get install -y build-essential git-core
 RUN wget -O chruby-0.3.7.tar.gz https://github.com/postmodern/chruby/archive/v0.3.7.tar.gz
 RUN tar -xzvf chruby-0.3.7.tar.gz
 RUN cd chruby-0.3.7/ && make install
+RUN echo "source /usr/local/share/chruby/chruby.sh" >> /etc/profile.d/chruby.sh && chmod u+x /etc/profile.d/chruby.sh
 
 # install ruby-install
 RUN wget -O ruby-install-0.3.2.tar.gz https://github.com/postmodern/ruby-install/archive/v0.3.2.tar.gz
