@@ -7,7 +7,7 @@ RUN apt-get update
 
 # install essentials
 RUN apt-get install -y curl wget
-RUN apt-get install -y build-essential git-core
+RUN apt-get install -y build-essential git-core libffi-dev libgdbm-dev libncurses5-dev libreadline-dev libssl-dev libyaml-dev zlib1g-dev
 
 # install chruby
 RUN wget -O chruby-0.3.7.tar.gz https://github.com/postmodern/chruby/archive/v0.3.7.tar.gz
